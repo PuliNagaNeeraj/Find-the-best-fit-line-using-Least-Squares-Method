@@ -20,35 +20,33 @@ To implement univariate Linear Regression to fit a straight line using least squ
 ```
 /*
 Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by: Puli Naga Neeraj
+Developed by: PULI NAGA NEERAJ
 RegisterNumber:  212223240130
 */
-
 import numpy as np
 import matplotlib.pyplot as plt
-X=np.array(eval(input("Enter the input x values in array:")))
-Y=np.array(eval(input("Enter the input y values in array:")))
-X_mean=np.mean(X)
-Y_mean=np.mean(Y)
+x=np.array(eval(input("Enter the values of x in array:")))
+y=np.array(eval(input("Enter the values of y in array:")))
+x_mean=np.mean(x)
+y_mean=np.mean(y)
 num=0
-denom=0
-for i in range(len(X)):
-    num+=(X[i]-X_mean)*(Y[i]-Y_mean)
-    denom+=(X[i]-X_mean)**2
-m=num/denom
-print("The slope of the predicted line is : ",m)
-b=Y_mean - m*X_mean
-print("The y-intercept is :",b)
-Y_pred=m*X+b
-print("The 'y' predicted values are :",Y_pred)
-plt.scatter(X,Y,color='black')
-plt.plot(X,Y_pred,color='red') 
+den=0
+for i in range(len(x)):
+    num+=(x[i]-x_mean)*(y[i]-y_mean)
+    den+=(x[i]-x_mean)**2
+m=num/den
+c=y_mean-m*x_mean
+print("The slope of predicted line is: ",m)
+print("The y-intercept is : ",c);
+y_pre=m*x+c
+print("The predicted value of 'y' is: ",y_pre)
+plt.scatter(x,y)
+plt.plot(x,y_pre,color="Blue")
 plt.show()
 ```
 
 ## Output:
-![Screenshot 2024-02-22 101915](https://github.com/PuliNagaNeeraj/Find-the-best-fit-line-using-Least-Squares-Method/assets/138849173/9df8779f-82af-436e-8c51-72c324deaa14)
-
+![image](https://github.com/PuliNagaNeeraj/Find-the-best-fit-line-using-Least-Squares-Method/assets/138849173/3cde7341-e188-4ebf-9df9-0e0f8ab63fed)
 
 
 ## Result:
